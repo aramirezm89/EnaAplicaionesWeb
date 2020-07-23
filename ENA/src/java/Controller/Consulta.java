@@ -5,23 +5,22 @@
  */
 package Controller;
 
-import java.sql.*;
+import Modelo.Requerimiento;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import BaseDatos.Conexion;
-import static java.lang.System.out;
 
 /**
  *
  * @author Antonio
  */
-@WebServlet(name = "Controlador", urlPatterns = {"/control.co"})
-public class Controlador extends HttpServlet {
+@WebServlet(name = "Consulta", urlPatterns = {"/Consulta"})
+public class Consulta extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,33 +34,20 @@ public class Controlador extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-
-        String usuario = request.getParameter("user");
-        String contraseña = request.getParameter("pass");
-
-        Conexion cnn = new Conexion();
-        try {
-            String query = "select * from REQ_usuarios where usuario = ? && contraseña = ?";
-            cnn.Conectar();
-            PreparedStatement st = cnn.getConexion().prepareStatement(query);
-            st.setString(1, usuario);
-            st.setString(2, contraseña);
-            ResultSet rs = st.executeQuery();
-
-            if (rs.next()) {
-                request.getRequestDispatcher("/Menu.jsp").forward(request, response);
-            } else {
-
-                request.getRequestDispatcher("/ErrorLogin.jsp").forward(request, response);
-            }
-
-        } catch (ClassNotFoundException ex) {
-
-        } catch (SQLException ex) {
-
-        }
+   
+        Requerimiento req= new Requerimiento();
+        
+        ArrayList <Requerimiento> lista = new ArrayList<Requerimiento>();
+        lista = req.listarReq();
+        request.setAttribute("lista", lista);
+      request.getRequestDispatcher("/ConsultarRequerimiento.jsp").forward(request, response);
     }
 
+    
+    
+    
+    
+    
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

@@ -3,6 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import javax.swing.JOptionPane;
 
 public final class Menu_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -44,15 +45,18 @@ public final class Menu_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
+      out.write("        \n");
       out.write("        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css\"/>\n");
-      out.write("        <link rel=\"stylesheet\" href=\"css/estilos.css\"/>\n");
       out.write("        <link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\">\n");
+      out.write("         <script type=\"text/javascript\" src=\"js/script.js\"></script>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\n");
       out.write("    </head>\n");
-      out.write("    <body>\n");
+      out.write("    <body onload=\"bienvenida()\">\n");
+      out.write("        \n");
       out.write("        <header class=\"card-panel teal lighten-2\">\n");
       out.write("            <h1>Menu Principal</h1> \n");
       out.write("        </header>\n");
@@ -63,7 +67,7 @@ public final class Menu_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        </div>\n");
       out.write("\n");
       out.write("        <div>\n");
-      out.write("            <a href=\"ConsultarRequerimiento.jsp\" class=\"waves-effect waves-light btn\"> Consultar Requerimiento\n");
+      out.write("            <a href=\"Consulta\" class=\"waves-effect waves-light btn\"> Consultar Requerimiento\n");
       out.write("                <i class=\"material-icons\">arrow_forward</i>\n");
       out.write("            </a>\n");
       out.write("\n");

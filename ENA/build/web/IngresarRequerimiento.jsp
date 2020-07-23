@@ -15,6 +15,7 @@
           <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+         <script type="text/javascript" src="js/script.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     </head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -24,37 +25,32 @@
         <header>
             <div class="card-panel teal lighten-2">
                 <h1>Ingresar Requerimiento</h1>
+                <a href="Menu.jsp" class="btn-floating btn-large waves-effect  waves-light black">
+                 <i class="material-icons">home</i>
+                 </a>
             </div>
         </header>
         <div class="row">
-            <form action="control.co" merthod="post">
+            <form action="InsertarRequerimiento.co" merthod="post">
 
 
                 <div>
-
-
-
-
-
-
-                    <label>Gerencia</label>
-                    <select name="gerencia"  class="browser-default">
+                   <label>Gerencia</label>
+                   <select name="gerencia"  class="browser-default" style=" width:225px" required>
 
                         <%
 
                             Conexion cnn = new Conexion();
 
                             try {
-                                String query = "select gerencia from REQ_gerencia";
+                                String query = "select distinct gerencia from REQ_gerencia";
                                 cnn.Conectar();
                                 PreparedStatement st = cnn.getConexion().prepareStatement(query);
                                 ResultSet rs = st.executeQuery();
                                 while (rs.next()) {
 
                         %>  
-
-
-                        <option><%=rs.getString("gerencia")%></option>
+                           <option><%=rs.getString("gerencia")%></option>
 
                         <%}
                             } catch (Exception e) {
@@ -71,10 +67,10 @@
                 <div>
 
                     <label>Departamento</label>
-                    <select name="departamento" class="browser-default">
+                    <select name="departamento" class="browser-default" style=" width:225px" required>
                         <%
                             try {
-                                String query = "select departamento from REQ_gerencia";
+                                String query = "select distinct departamento from REQ_gerencia";
                                 cnn.Conectar();
                                 PreparedStatement st = cnn.getConexion().prepareStatement(query);
                                 ResultSet rs = st.executeQuery();
@@ -95,10 +91,10 @@
                 <div>
 
                     <label>Asignar a:</label>
-                    <select name="asignado" class="browser-default">
+                    <select name="asignado" class="browser-default" style=" width:225px" required>
                         <%
                             try {
-                                String query = "select asignado from REQ_gerencia";
+                                String query = "select distinct asignado from REQ_gerencia";
                                 cnn.Conectar();
                                 PreparedStatement st = cnn.getConexion().prepareStatement(query);
                                 ResultSet rs = st.executeQuery();
@@ -120,10 +116,10 @@
                 <div>
 
                     <label>Encargado:</label>
-                    <select name="encargado" class="browser-default">
+                    <select name="encargado" class="browser-default" style=" width:225px" required>
                         <%
                             try {
-                                String query = "select encargado from REQ_gerencia";
+                                String query = "select distinct  encargado from REQ_gerencia";
                                 cnn.Conectar();
                                 PreparedStatement st = cnn.getConexion().prepareStatement(query);
                                 ResultSet rs = st.executeQuery();
@@ -146,7 +142,7 @@
 
 
                 <div class="input-field col s12" >
-                    <textarea class="materialize-textarea" name="requerimiento"  placeholder="requerimiento"></textarea>
+                    <textarea class="materialize-textarea" name="requerimiento"  placeholder="Ingrese su requerimiento" required></textarea>
 
                 </div>
 
@@ -155,7 +151,7 @@
 
 
                 <input type="reset" value="Borrar"class="waves-effect waves-light btn">
-                <input type="submit" value="Enviar" class="waves-effect waves-light btn">
+                <input type="submit" value="Guardar" class="waves-effect waves-light btn" onclick="Registrado()">
 
                 </div>
             </form>

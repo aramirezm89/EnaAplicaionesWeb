@@ -57,6 +57,7 @@ public final class IngresarRequerimiento_jsp extends org.apache.jasper.runtime.H
       out.write("          <head>\n");
       out.write("        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css\"/>\n");
       out.write("        <link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\">\n");
+      out.write("         <script type=\"text/javascript\" src=\"js/script.js\"></script>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\n");
       out.write("    </head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\n");
@@ -66,21 +67,18 @@ public final class IngresarRequerimiento_jsp extends org.apache.jasper.runtime.H
       out.write("        <header>\n");
       out.write("            <div class=\"card-panel teal lighten-2\">\n");
       out.write("                <h1>Ingresar Requerimiento</h1>\n");
+      out.write("                <a href=\"Menu.jsp\" class=\"btn-floating btn-large waves-effect  waves-light black\">\n");
+      out.write("                 <i class=\"material-icons\">home</i>\n");
+      out.write("                 </a>\n");
       out.write("            </div>\n");
       out.write("        </header>\n");
       out.write("        <div class=\"row\">\n");
-      out.write("            <form action=\"control.co\" merthod=\"post\">\n");
+      out.write("            <form action=\"InsertarRequerimiento.co\" merthod=\"post\">\n");
       out.write("\n");
       out.write("\n");
       out.write("                <div>\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("                    <label>Gerencia</label>\n");
-      out.write("                    <select name=\"gerencia\"  class=\"browser-default\">\n");
+      out.write("                   <label>Gerencia</label>\n");
+      out.write("                   <select name=\"gerencia\"  class=\"browser-default\" style=\" width:225px\" required>\n");
       out.write("\n");
       out.write("                        ");
 
@@ -88,7 +86,7 @@ public final class IngresarRequerimiento_jsp extends org.apache.jasper.runtime.H
                             Conexion cnn = new Conexion();
 
                             try {
-                                String query = "select gerencia from REQ_gerencia";
+                                String query = "select distinct gerencia from REQ_gerencia";
                                 cnn.Conectar();
                                 PreparedStatement st = cnn.getConexion().prepareStatement(query);
                                 ResultSet rs = st.executeQuery();
@@ -96,9 +94,7 @@ public final class IngresarRequerimiento_jsp extends org.apache.jasper.runtime.H
 
                         
       out.write("  \n");
-      out.write("\n");
-      out.write("\n");
-      out.write("                        <option>");
+      out.write("                           <option>");
       out.print(rs.getString("gerencia"));
       out.write("</option>\n");
       out.write("\n");
@@ -119,11 +115,11 @@ public final class IngresarRequerimiento_jsp extends org.apache.jasper.runtime.H
       out.write("                <div>\n");
       out.write("\n");
       out.write("                    <label>Departamento</label>\n");
-      out.write("                    <select name=\"departamento\" class=\"browser-default\">\n");
+      out.write("                    <select name=\"departamento\" class=\"browser-default\" style=\" width:225px\" required>\n");
       out.write("                        ");
 
                             try {
-                                String query = "select departamento from REQ_gerencia";
+                                String query = "select distinct departamento from REQ_gerencia";
                                 cnn.Conectar();
                                 PreparedStatement st = cnn.getConexion().prepareStatement(query);
                                 ResultSet rs = st.executeQuery();
@@ -149,11 +145,11 @@ public final class IngresarRequerimiento_jsp extends org.apache.jasper.runtime.H
       out.write("                <div>\n");
       out.write("\n");
       out.write("                    <label>Asignar a:</label>\n");
-      out.write("                    <select name=\"asignado\" class=\"browser-default\">\n");
+      out.write("                    <select name=\"asignado\" class=\"browser-default\" style=\" width:225px\" required>\n");
       out.write("                        ");
 
                             try {
-                                String query = "select asignado from REQ_gerencia";
+                                String query = "select distinct asignado from REQ_gerencia";
                                 cnn.Conectar();
                                 PreparedStatement st = cnn.getConexion().prepareStatement(query);
                                 ResultSet rs = st.executeQuery();
@@ -180,11 +176,11 @@ public final class IngresarRequerimiento_jsp extends org.apache.jasper.runtime.H
       out.write("                <div>\n");
       out.write("\n");
       out.write("                    <label>Encargado:</label>\n");
-      out.write("                    <select name=\"encargado\" class=\"browser-default\">\n");
+      out.write("                    <select name=\"encargado\" class=\"browser-default\" style=\" width:225px\" required>\n");
       out.write("                        ");
 
                             try {
-                                String query = "select encargado from REQ_gerencia";
+                                String query = "select distinct  encargado from REQ_gerencia";
                                 cnn.Conectar();
                                 PreparedStatement st = cnn.getConexion().prepareStatement(query);
                                 ResultSet rs = st.executeQuery();
@@ -212,7 +208,7 @@ public final class IngresarRequerimiento_jsp extends org.apache.jasper.runtime.H
       out.write("\n");
       out.write("\n");
       out.write("                <div class=\"input-field col s12\" >\n");
-      out.write("                    <textarea class=\"materialize-textarea\" name=\"requerimiento\"  placeholder=\"requerimiento\"></textarea>\n");
+      out.write("                    <textarea class=\"materialize-textarea\" name=\"requerimiento\"  placeholder=\"Ingrese su requerimiento\" required></textarea>\n");
       out.write("\n");
       out.write("                </div>\n");
       out.write("\n");
@@ -221,7 +217,7 @@ public final class IngresarRequerimiento_jsp extends org.apache.jasper.runtime.H
       out.write("\n");
       out.write("\n");
       out.write("                <input type=\"reset\" value=\"Borrar\"class=\"waves-effect waves-light btn\">\n");
-      out.write("                <input type=\"submit\" value=\"Enviar\" class=\"waves-effect waves-light btn\">\n");
+      out.write("                <input type=\"submit\" value=\"Guardar\" class=\"waves-effect waves-light btn\" onclick=\"Registrado()\">\n");
       out.write("\n");
       out.write("                </div>\n");
       out.write("            </form>\n");
