@@ -60,7 +60,7 @@ public final class CerrarRequerimiento_jsp extends org.apache.jasper.runtime.Htt
       out.write("    </head>\n");
       out.write("    <body>\n");
       out.write("        \n");
-      out.write("        \n");
+      out.write("  \n");
       out.write("                     \n");
       out.write("        ");
   
@@ -77,7 +77,7 @@ public final class CerrarRequerimiento_jsp extends org.apache.jasper.runtime.Htt
         
       out.write("\n");
       out.write("          <header>\n");
-      out.write("            <div class=\"card-panel teal lighten-2\">\n");
+      out.write("            <div class=\"card-panel blue lighten-2\">\n");
       out.write("                <h1>Cerrar Requerimiento</h1>\n");
       out.write("                 <a href=\"Menu.jsp\" class=\"btn-floating btn-large waves-effect  waves-light black\">\n");
       out.write("            <i class=\"material-icons\">home</i>\n");
@@ -178,11 +178,12 @@ public final class CerrarRequerimiento_jsp extends org.apache.jasper.runtime.Htt
       out.write("                    </select>\n");
       out.write("\n");
       out.write("                </div> \n");
+      out.write(" \n");
       out.write("   ");
   while (rs.next()) { 
       out.write("\n");
       out.write("          \n");
-      out.write("        <form action=\"EditarEstado.co\" merthod=\"post\">\n");
+      out.write("        <form action=\"EditarEstado.co\" method=\"post\">\n");
       out.write("         \n");
       out.write("            <table class=\"striped\" cellspacing=\"3\" cellpadding=\"5\" border=\"1\" >\n");
       out.write("         \n");
@@ -206,32 +207,30 @@ public final class CerrarRequerimiento_jsp extends org.apache.jasper.runtime.Htt
       out.write("                <td><font color=\"green\"><input type=\"text\" name=\"id\" readonly=\"\" value=\"");
       out.print(rs.getInt("id"));
       out.write("\" </font> </td>\n");
-      out.write("                <td><font color=\"green\"><input type=\"text\" name=\"nombre\" readonly=\"\" value=\"");
+      out.write("                <td><font color=\"green\"><input type=\"text\" name=\"gerencia\" readonly=\"\" value=\"");
       out.print(rs.getString("gerencia"));
       out.write("\"</font></td>\n");
-      out.write("                <td><font color=\"green\"><input type=\"text\" name=\"apellido\" readonly=\"\" value=\"");
+      out.write("                <td><font color=\"green\"><input type=\"text\" name=\"departamento\" readonly=\"\" value=\"");
       out.print(rs.getString("departamento"));
       out.write("\"</font></td>\n");
-      out.write("                <td><font color=\"green\"><input type=\"text\" name=\"sexo\" readonly=\"\" value=\"");
+      out.write("                <td><font color=\"green\"><input type=\"text\" name=\"asignado\" readonly=\"\" value=\"");
       out.print(rs.getString("asignado"));
       out.write("\"</font></td>\n");
-      out.write("                <td><font color=\"green\"><input type=\"text\" name=\"promedio\" readonly=\"\" value=\"");
+      out.write("                <td><font color=\"green\"><input type=\"text\" name=\"encargado\" readonly=\"\" value=\"");
       out.print(rs.getString("encargado"));
       out.write("\"</font></td>\n");
-      out.write("                <td><font color=\"green\"><input type=\"text\" name=\"promedio\" readonly=\"\" value=\"");
+      out.write("                <td><font color=\"green\"><input type=\"text\" name=\"requerimiento\" readonly=\"\" value=\"");
       out.print(rs.getString("requerimiento"));
       out.write("\"</font></td>\n");
-      out.write("                <td><font color=\"green\"><input type=\"text\" name=\"promedio\" readonly=\"\" value=\"");
+      out.write("                <td><font color=\"green\"><input type=\"text\" name=\"estado\" readonly=\"\" value=\"");
       out.print(rs.getString("estado"));
       out.write("\"</font></td>\n");
       out.write("              \n");
       out.write("                <td>\n");
       out.write("                    \n");
-      out.write("                <input type=\"submit\" value=\"Cerrar\" class=\"waves-effect waves-light btn\">     \n");
-      out.write("                 \n");
-      out.write("         \n");
+      out.write("                <input type=\"submit\" value=\"Cerrar\" class=\"waves-effect blue btn\">  \n");
       out.write("                \n");
-      out.write("                \n");
+      out.write("              \n");
       out.write("                </td>\n");
       out.write("                \n");
       out.write("            </tr>\n");

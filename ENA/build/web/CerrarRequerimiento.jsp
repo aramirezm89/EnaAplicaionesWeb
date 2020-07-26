@@ -33,7 +33,7 @@
        
         %>
           <header>
-            <div class="card-panel teal lighten-2">
+            <div class="card-panel blue lighten-2">
                 <h1>Cerrar Requerimiento</h1>
                  <a href="Menu.jsp" class="btn-floating btn-large waves-effect  waves-light black">
             <i class="material-icons">home</i>
@@ -119,7 +119,7 @@
  
    <%  while (rs.next()) { %>
           
-        <form action="EditarEstado.co" merthod="post">
+        <form action="EditarEstado.co" method="post">
          
             <table class="striped" cellspacing="3" cellpadding="5" border="1" >
          
@@ -150,9 +150,9 @@
               
                 <td>
                     
-                <input type="submit" value="Cerrar" class="waves-effect waves-light btn">  
+                <input type="submit" value="Cerrar" class="waves-effect blue btn">  
                 
-            
+              
                 </td>
                 
             </tr>

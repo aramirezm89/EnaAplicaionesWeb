@@ -17,24 +17,26 @@
     </head>
     <body onload="bienvenida()">
         
-        <header class="card-panel teal lighten-2">
+         ${msg}
+        
+        <header class="card-panel blue lighten-2">
             <h1>Menu Principal</h1> 
         </header>
         <div>
-            <a href="IngresarRequerimiento.jsp" class="waves-effect waves-light btn"> Ingresar Requerimiento
+            <a href="IngresarRequerimiento.jsp" class="waves-effect blue  btn"> Ingresar Requerimiento
                 <i class="material-icons">arrow_forward</i> 
             </a>
         </div>
 
         <div>
-            <a href="Consulta" class="waves-effect waves-light btn"> Consultar Requerimiento
+            <a href="Consulta" class="waves-effect blue btn"> Consultar Requerimiento
                 <i class="material-icons">arrow_forward</i>
             </a>
 
         </div>
 
         <div>
-            <a href="CerrarRequerimiento.jsp" class="waves-effect waves-light btn"> Cerrar Requerimiento
+            <a href="CerrarRequerimiento.jsp" class="waves-effect blue btn"> Cerrar Requerimiento
                 <i class="material-icons">arrow_forward</i>
             </a>
         </div>

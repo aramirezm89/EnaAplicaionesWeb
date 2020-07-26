@@ -49,7 +49,9 @@ public class Controlador extends HttpServlet {
             ResultSet rs = st.executeQuery();
 
             if (rs.next()) {
+                request.setAttribute("msg", "<div class='chip'>Bienvenido al sistema<i class='close material-icons'>close</i></div>"); 
                 request.getRequestDispatcher("/Menu.jsp").forward(request, response);
+               
             } else {
 
                 request.getRequestDispatcher("/ErrorLogin.jsp").forward(request, response);

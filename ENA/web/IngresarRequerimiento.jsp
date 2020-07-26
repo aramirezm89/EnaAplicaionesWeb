@@ -23,7 +23,7 @@
     <body>
 
         <header>
-            <div class="card-panel teal lighten-2">
+            <div class="card-panel blue lighten-2">
                 <h1>Ingresar Requerimiento</h1>
                 <a href="Menu.jsp" class="btn-floating btn-large waves-effect  waves-light black">
                  <i class="material-icons">home</i>
@@ -31,7 +31,7 @@
             </div>
         </header>
         <div class="row">
-            <form action="InsertarRequerimiento.co" merthod="post">
+            <form action="InsertarRequerimiento.co" method="post">
 
 
                 <div>
@@ -150,13 +150,15 @@
 
 
 
-                <input type="reset" value="Borrar"class="waves-effect waves-light btn">
-                <input type="submit" value="Guardar" class="waves-effect waves-light btn" onclick="Registrado()">
+                <input type="reset" value="Borrar"class="waves-effect blue btn">
+                <input type="submit" value="Guardar" class="waves-effect blue btn" onclick="Registrado()">
 
                 </div>
+               
+                   ${msg}
             </form>
 
-
+         
 
         </div>
 

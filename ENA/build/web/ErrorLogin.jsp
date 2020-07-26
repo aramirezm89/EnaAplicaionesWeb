@@ -15,10 +15,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     </head>
     <body onload="ErrorUsuario()">
-         <div class="card-panel teal lighten-2">
+         <div class="card-panel blue lighten-2">
                     <h1>Usuario no existe</h1>
                 </div>
       
-        <a href="Login.jsp" class="waves-effect waves-light btn">Regresar</a>
+        <a href="Login.jsp" class="waves-effect blue btn">Regresar</a>
     </body>
 </html>

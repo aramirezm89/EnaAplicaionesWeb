@@ -18,7 +18,7 @@
     </head>
     <body>
         <header>
-            <div class="card-panel teal lighten-2">
+            <div class="card-panel blue lighten-2">
                 <h1>Consultar Requerimiento</h1>
                 <a href="Menu.jsp" class="btn-floating btn-large waves-effect  waves-light black">
                     <i class="material-icons">home</i>
@@ -113,7 +113,7 @@
 
         </div> 
 
-        <input type="submit" value="Buscar" class="waves-effect waves-light btn" onclick="Registrado()">
+        <input type="submit" value="Buscar" class="waves-effect blue btn" onclick="Registrado()">
 
     </form>
 

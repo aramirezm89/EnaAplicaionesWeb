@@ -41,9 +41,9 @@ public class InsertarRequerimiento extends HttpServlet {
         String encargado = request.getParameter("encargado");
         String requerimiento = request.getParameter("requerimiento");
         
-        Requerimiento req = new Requerimiento(gerencia,departamento,asignado,encargado,requerimiento);
+       Requerimiento req = new Requerimiento(gerencia,departamento,asignado,encargado,requerimiento);
        req.registrarReq();
-     
+       request.setAttribute("msg", "<div class='chip'>Requerimiento ingresado con exito<i class='close material-icons'>close</i></div>");
         
         ArrayList <Requerimiento> lista = new ArrayList<Requerimiento>();
         lista = req.listarReq();

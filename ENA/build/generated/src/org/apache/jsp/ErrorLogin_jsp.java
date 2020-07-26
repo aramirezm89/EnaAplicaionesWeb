@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class ErrorLogin_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -46,47 +46,19 @@ public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
-      out.write("    <head>\n");
+      out.write("     <head>\n");
       out.write("       <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css\"/>\n");
       out.write("        <link rel=\"stylesheet\" href=\"css/estilos.css\"/>\n");
       out.write("        <link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\">\n");
+      out.write("        <script type=\"text/javascript\" src=\"js/script.js\"></script>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">\n");
       out.write("    </head>\n");
-      out.write("    <body>\n");
-      out.write("     \n");
-      out.write("            <div class=\"row\">\n");
-      out.write("            <div class=\"col s6 offset-s3\" >\n");
-      out.write("                <div class=\"card-panel z-depth-5\" >\n");
-      out.write("       <header>\n");
-      out.write("                <div class=\"card-panel blue lighten-2\">\n");
-      out.write("                    <h1>Ingrese Usuario y contraseña</h1>\n");
+      out.write("    <body onload=\"ErrorUsuario()\">\n");
+      out.write("         <div class=\"card-panel blue lighten-2\">\n");
+      out.write("                    <h1>Usuario no existe</h1>\n");
       out.write("                </div>\n");
-      out.write("            </header>\n");
-      out.write("        <form action=\"control.co\" method=\"post\">\n");
-      out.write("            <table cellspacing=\"3\" cellpadding=\"5\" border=\"1\">\n");
-      out.write("                <tr>\n");
-      out.write("                    <td align=\"right\">Usuario:</td>\n");
-      out.write("                    <td><input type=\"text\" name=\"user\" placeholder=\"Ingrese su usuario\"></td>\n");
-      out.write("                </tr>\n");
-      out.write("                \n");
-      out.write("                <tr>\n");
-      out.write("                   <td align=\"right\">Contraseña:</td>\n");
-      out.write("                    <td><input type=\"password\" name=\"pass\" placeholder=\"Ingrese su contraseña\"></td>\n");
-      out.write("                </tr>\n");
-      out.write("\n");
-      out.write("            </table>\n");
-      out.write("            \n");
-      out.write("                <input type=\"reset\" value=\"Borrar\"class=\"waves-effect blue btn\">\n");
-      out.write("                <input type=\"submit\" value=\"Enviar\" class=\"waves-effect blue  btn\">\n");
-      out.write("        </form>\n");
-      out.write("                    </div>\n");
-      out.write("                </div>\n");
-      out.write("             </div>\n");
-      out.write("                      \n");
-      out.write("       \n");
-      out.write("        </div>\n");
-      out.write("               \n");
-      out.write("            </div>\n");
+      out.write("      \n");
+      out.write("        <a href=\"Login.jsp\" class=\"waves-effect blue btn\">Regresar</a>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

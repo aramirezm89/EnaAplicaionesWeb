@@ -61,7 +61,7 @@ public final class ConsultarRequerimiento_jsp extends org.apache.jasper.runtime.
       out.write("    </head>\n");
       out.write("    <body>\n");
       out.write("        <header>\n");
-      out.write("            <div class=\"card-panel teal lighten-2\">\n");
+      out.write("            <div class=\"card-panel blue lighten-2\">\n");
       out.write("                <h1>Consultar Requerimiento</h1>\n");
       out.write("                <a href=\"Menu.jsp\" class=\"btn-floating btn-large waves-effect  waves-light black\">\n");
       out.write("                    <i class=\"material-icons\">home</i>\n");
@@ -77,108 +77,108 @@ ArrayList<Requerimiento> lista = (ArrayList<Requerimiento>) request.getAttribute
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("        <form action=\"ConsultarRequerimiento.jsp\" merthod=\"post\">\n");
+      out.write("        <form action=\"Filtro\" method=\"post\">\n");
       out.write("\n");
-      out.write("        <select name=\"gerencia\"  class=\"browser-default\"  style=\" width:225px\">\n");
+      out.write("            <select name=\"gerencia\"  class=\"browser-default\"  style=\" width:225px\">\n");
       out.write("\n");
-      out.write("            ");
+      out.write("                ");
 
 
-                Conexion cnn = new Conexion();
+                    Conexion cnn = new Conexion();
 
-                try {
-                    String query = "select distinct gerencia from REQ_requerimiento";
-                    cnn.Conectar();
-                    PreparedStatement st = cnn.getConexion().prepareStatement(query);
-                    ResultSet rs = st.executeQuery();
-                    while (rs.next()) {
+                    try {
+                        String query = "select distinct gerencia from REQ_requerimiento";
+                        cnn.Conectar();
+                        PreparedStatement st = cnn.getConexion().prepareStatement(query);
+                        ResultSet rs = st.executeQuery();
+                        while (rs.next()) {
 
-            
+                
       out.write("  \n");
-      out.write("            <option>");
+      out.write("                <option>");
       out.print(rs.getString("gerencia"));
       out.write("</option>\n");
       out.write("\n");
-      out.write("            ");
+      out.write("                ");
 }
-                    cnn.Desconectar();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            
+                        cnn.Desconectar();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                
       out.write(" \n");
       out.write("\n");
-      out.write("        </select>\n");
+      out.write("            </select>\n");
       out.write("\n");
-      out.write("    </div>\n");
+      out.write("        </div>\n");
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("    <div>\n");
+      out.write("        <div>\n");
       out.write("\n");
-      out.write("        <label>Departamento</label>\n");
-      out.write("        <select name=\"departamento\" class=\"browser-default\" style=\" width:225px\">\n");
-      out.write("            ");
+      out.write("            <label>Departamento</label>\n");
+      out.write("            <select name=\"departamento\" class=\"browser-default\" style=\" width:225px\">\n");
+      out.write("                ");
 
-                try {
-                    String query = "select distinct departamento from REQ_requerimiento";
-                    cnn.Conectar();
-                    PreparedStatement st = cnn.getConexion().prepareStatement(query);
-                    ResultSet rs = st.executeQuery();
-                    while (rs.next()) {
+                    try {
+                        String query = "select distinct departamento from REQ_requerimiento";
+                        cnn.Conectar();
+                        PreparedStatement st = cnn.getConexion().prepareStatement(query);
+                        ResultSet rs = st.executeQuery();
+                        while (rs.next()) {
 
-            
+                
       out.write("  \n");
-      out.write("            <option selected>");
+      out.write("                <option selected>");
       out.print(rs.getString("departamento"));
       out.write("</option>  \n");
-      out.write("            ");
+      out.write("                ");
 }
-                    cnn.Desconectar();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            
+                        cnn.Desconectar();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                
       out.write(" \n");
-      out.write("        </select>\n");
+      out.write("            </select>\n");
       out.write("\n");
-      out.write("    </div>\n");
+      out.write("        </div>\n");
       out.write("\n");
       out.write("\n");
-      out.write("    <div>\n");
+      out.write("        <div>\n");
       out.write("\n");
-      out.write("        <label>Asignar a:</label>\n");
-      out.write("        <select name=\"asignado\" class=\"browser-default \" style=\" width:225px\">\n");
-      out.write("            ");
+      out.write("            <label>Asignar a:</label>\n");
+      out.write("            <select name=\"asignado\" class=\"browser-default \" style=\" width:225px\">\n");
+      out.write("                ");
 
-                try {
-                    String query = "select distinct asignado from REQ_requerimiento";
-                    cnn.Conectar();
-                    PreparedStatement st = cnn.getConexion().prepareStatement(query);
-                    ResultSet rs = st.executeQuery();
-                    while (rs.next()) {
+                    try {
+                        String query = "select distinct asignado from REQ_requerimiento";
+                        cnn.Conectar();
+                        PreparedStatement st = cnn.getConexion().prepareStatement(query);
+                        ResultSet rs = st.executeQuery();
+                        while (rs.next()) {
 
-            
+                
       out.write(" \n");
-      out.write("            <option selected=\"\">");
+      out.write("                <option selected=\"\">");
       out.print(rs.getString("asignado"));
       out.write("</option>  \n");
-      out.write("            ");
+      out.write("                ");
 }
-                    cnn.Desconectar();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            
+                        cnn.Desconectar();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                
       out.write(" \n");
       out.write("\n");
-      out.write("        </select>\n");
+      out.write("            </select>\n");
       out.write("\n");
-      out.write("    </div> \n");
-      out.write("            \n");
-      out.write("         <input type=\"submit\" value=\"Buscar\" class=\"waves-effect waves-light btn\" onclick=\"Registrado()\">\n");
+      out.write("        </div> \n");
       out.write("\n");
-      out.write("</form>\n");
+      out.write("        <input type=\"submit\" value=\"Buscar\" class=\"waves-effect blue btn\" onclick=\"Registrado()\">\n");
+      out.write("\n");
+      out.write("    </form>\n");
       out.write("\n");
       out.write("    <table class=\"striped\">\n");
       out.write("        <tr>\n");
@@ -228,8 +228,11 @@ ArrayList<Requerimiento> lista = (ArrayList<Requerimiento>) request.getAttribute
       out.write("\n");
       out.write("\n");
       out.write("    </table>  \n");
+      out.write("   \n");
+      out.write("        \n");
       out.write("</body>\n");
       out.write("</html>\n");
+      out.write("\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
