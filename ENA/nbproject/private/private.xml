@@ -4,12 +4,15 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="taller_de_aplicaciones_para_internet_en_Java">
             <file>file:/C:/Users/Antonio/Desktop/AIEP/SEGUNDO%20AÑO/taller_de_aplicaciones_para_internet_en_Java/Antonio_Ramirez_Monsalve/ENA/web/ErrorLogin.jsp</file>
+            <file>file:/C:/Users/Antonio/Desktop/AIEP/SEGUNDO%20AÑO/taller_de_aplicaciones_para_internet_en_Java/Antonio_Ramirez_Monsalve/ENA/src/java/Controller/Consulta.java</file>
             <file>file:/C:/Users/Antonio/Desktop/AIEP/SEGUNDO%20AÑO/taller_de_aplicaciones_para_internet_en_Java/Antonio_Ramirez_Monsalve/ENA/web/ConsultarRequerimiento.jsp</file>
             <file>file:/C:/Users/Antonio/Desktop/AIEP/SEGUNDO%20AÑO/taller_de_aplicaciones_para_internet_en_Java/Antonio_Ramirez_Monsalve/ENA/src/java/Modelo/Requerimiento.java</file>
             <file>file:/C:/Users/Antonio/Desktop/AIEP/SEGUNDO%20AÑO/taller_de_aplicaciones_para_internet_en_Java/Antonio_Ramirez_Monsalve/ENA/web/IngresarRequerimiento.jsp</file>
+            <file>file:/C:/Users/Antonio/Desktop/AIEP/SEGUNDO%20AÑO/taller_de_aplicaciones_para_internet_en_Java/Antonio_Ramirez_Monsalve/ENA/src/java/BaseDatos/Conexion.java</file>
             <file>file:/C:/Users/Antonio/Desktop/AIEP/SEGUNDO%20AÑO/taller_de_aplicaciones_para_internet_en_Java/Antonio_Ramirez_Monsalve/ENA/web/Login.jsp</file>
             <file>file:/C:/Users/Antonio/Desktop/AIEP/SEGUNDO%20AÑO/taller_de_aplicaciones_para_internet_en_Java/Antonio_Ramirez_Monsalve/ENA/src/java/Controller/EditarEstado.java</file>
             <file>file:/C:/Users/Antonio/Desktop/AIEP/SEGUNDO%20AÑO/taller_de_aplicaciones_para_internet_en_Java/Antonio_Ramirez_Monsalve/ENA/web/CerrarRequerimiento.jsp</file>
+            <file>file:/C:/Users/Antonio/Desktop/AIEP/SEGUNDO%20AÑO/taller_de_aplicaciones_para_internet_en_Java/Antonio_Ramirez_Monsalve/ENA/web/Menu.jsp</file>
         </group>
     </open-files>
 </project-private>
