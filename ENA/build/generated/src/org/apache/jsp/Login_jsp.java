@@ -66,12 +66,12 @@ public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <table cellspacing=\"3\" cellpadding=\"5\" border=\"1\">\n");
       out.write("                <tr>\n");
       out.write("                    <td align=\"right\">Usuario:</td>\n");
-      out.write("                    <td><input type=\"text\" name=\"user\" placeholder=\"Ingrese su usuario\"></td>\n");
+      out.write("                    <td><input type=\"text\" name=\"user\" placeholder=\"Ingrese su usuario\" required></td>\n");
       out.write("                </tr>\n");
       out.write("                \n");
       out.write("                <tr>\n");
       out.write("                   <td align=\"right\">Contraseña:</td>\n");
-      out.write("                    <td><input type=\"password\" name=\"pass\" placeholder=\"Ingrese su contraseña\"></td>\n");
+      out.write("                   <td><input type=\"password\" name=\"pass\" placeholder=\"Ingrese su contraseña\" required></td>\n");
       out.write("                </tr>\n");
       out.write("\n");
       out.write("            </table>\n");
@@ -84,9 +84,6 @@ public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("             </div>\n");
       out.write("                      \n");
       out.write("       \n");
-      out.write("        </div>\n");
-      out.write("               \n");
-      out.write("            </div>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

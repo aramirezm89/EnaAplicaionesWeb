@@ -27,12 +27,12 @@
             <table cellspacing="3" cellpadding="5" border="1">
                 <tr>
                     <td align="right">Usuario:</td>
-                    <td><input type="text" name="user" placeholder="Ingrese su usuario"></td>
+                    <td><input type="text" name="user" placeholder="Ingrese su usuario" required></td>
                 </tr>
                 
                 <tr>
                    <td align="right">Contraseña:</td>
-                    <td><input type="password" name="pass" placeholder="Ingrese su contraseña"></td>
+                   <td><input type="password" name="pass" placeholder="Ingrese su contraseña" required></td>
                 </tr>
 
             </table>
@@ -45,8 +45,5 @@
              </div>
                       
        
-        </div>
-               
-            </div>
     </body>
 </html>
